@@ -8,6 +8,9 @@
 [![Portable](https://img.shields.io/badge/Portable-Sin_instalar-ffe45f?style=for-the-badge)](#descargar)
 [![Mundial 2026](https://img.shields.io/badge/Mundial-2026-caffd8?style=for-the-badge)](#que-hace)
 
+**Tambien puedes descargar el `.exe` y tener la aplicacion directamente en tu ordenador.**  
+No necesitas instalar Node.js ni abrir el codigo para usarla.
+
 ![Vista previa de la app](./docs/preview.png)
 
 </div>
@@ -16,7 +19,7 @@
 
 ## Descargar
 
-Para usar la app no hace falta tocar codigo.
+Para usar la app no hace falta tocar codigo: descarga uno de los `.exe` y abre la aplicacion en tu ordenador.
 
 | Opcion | Archivo | Cuando usarla |
 | --- | --- | --- |
