@@ -1,38 +1,97 @@
-# Mundial 2026 - APP Visual Vacia
+<div align="center">
 
-Mini aplicacion local para compartir con participantes de la porra.
+# FIFA World Cup 2026 - Porra Visual
 
-Incluye:
+### Simula el cuadro, elige por bombos y juega la porra con un panel visual
 
-- Fase de grupos con las 48 selecciones.
-- Banderas locales para todos los equipos.
-- Reordenacion de cada grupo arrastrando equipos dentro del grupo.
-- Cuadro de eliminatorias vacio con referencias oficiales de cruce: M73-M104, 1A/2B/3A y ganadores G73-G102.
-- Boton `Simular` para autorrellenar solo la ronda de 32 desde el orden actual de los grupos.
-- Lineas de flujo entre partidos para seguir el camino del cuadro.
-- Drag and drop desde los grupos hacia cualquier casilla del cuadro.
-- Boton para reiniciar el tablero.
+[![Windows](https://img.shields.io/badge/Windows-App-42d8ff?style=for-the-badge)](#descargar)
+[![Portable](https://img.shields.io/badge/Portable-Sin_instalar-ffe45f?style=for-the-badge)](#descargar)
+[![Mundial 2026](https://img.shields.io/badge/Mundial-2026-caffd8?style=for-the-badge)](#que-hace)
 
-No incluye:
+![Vista previa de la app](./docs/preview.png)
 
-- Recomendaciones.
-- Rankings o escenarios CSV.
-- Datos calculados.
-- Lectura de archivos internos del proyecto original.
+</div>
 
-## Ejecutar en Windows
+---
 
-Doble clic en:
+## Descargar
 
-```bat
-INICIAR_APP.bat
-```
+Para usar la app no hace falta tocar codigo.
 
-La primera vez instalara dependencias con `npm install`. Despues abrira la app con Electron.
+| Opcion | Archivo | Cuando usarla |
+| --- | --- | --- |
+| Portable | [`Mundial2026-App-Visual-Vacio-Portable.exe`](./Mundial2026-App-Visual-Vacio-Portable.exe) | Abrir y usar directamente, sin instalar nada. |
+| Instalador | [`Mundial 2026 App Visual Vacio Setup 0.1.0.exe`](./Mundial%202026%20App%20Visual%20Vacio%20Setup%200.1.0.exe) | Instalar la app en Windows como una aplicacion normal. |
 
-## Ejecutar desde terminal
+> Windows puede mostrar un aviso de editor desconocido porque la app no esta firmada con certificado comercial.
+
+## Que Hace
+
+Esta app permite jugar con el Mundial 2026 de forma visual:
+
+- Reordena los grupos arrastrando equipos.
+- Rellena la primera ronda automaticamente desde el orden de grupos.
+- Completa el cuadro a mano con drag and drop.
+- Valida que cada equipo solo pueda entrar en cruces donde realmente aplica.
+- Genera el cuadro completo desde una seleccion por bombo.
+- Muestra lineas de flujo para seguir el camino hasta la final.
+- Destaca los equipos elegidos por bombo dentro del cuadrante.
+
+## Dos Modos
+
+### Generar por cuadro
+
+Pensado para construir el Mundial paso a paso.
+
+1. Ordena cada grupo segun tu prediccion.
+2. Pulsa **Simular primera ronda**.
+3. Completa el resto de cruces arrastrando ganadores.
+4. Pulsa **Simular bombos** para ver que equipo conviene elegir en cada bombo segun el cuadro que hayas armado.
+
+### Generar por bombo
+
+Pensado para decidir tus selecciones de porra rapido.
+
+1. Elige un equipo de cada bombo.
+2. Pulsa **Generar cuadrante**.
+3. La app rellena el cuadro completo y destaca tus elegidos.
+
+## Que Incluye
+
+- 48 selecciones organizadas por grupos.
+- Banderas locales de todos los equipos.
+- Cuadro completo del Mundial 2026, de M73 a M104.
+- Pestañas para trabajar por cuadro o por bombo.
+- Ejecutable portable e instalador para Windows.
+
+## Ejecutar Desde Codigo
+
+Solo hace falta si quieres modificar la app.
 
 ```bash
 npm install
 npm start
 ```
+
+Tambien puedes usar:
+
+```bat
+INICIAR_APP.bat
+```
+
+## Crear Ejecutables
+
+```bash
+npm run build:portable
+```
+
+El resultado se genera en la carpeta `dist/`.
+
+---
+
+<div align="center">
+
+**Porra Mundial 2026**  
+Una forma mas clara, rapida y divertida de discutir el cuadro antes de jugar.
+
+</div>
