@@ -11,7 +11,7 @@
 **Tambien puedes descargar el `.exe` y tener la aplicacion directamente en tu ordenador.**  
 No necesitas instalar Node.js ni abrir el codigo para usarla.
 
-![Vista previa de la app](./docs/preview.png)
+<img src="./docs/preview.png" alt="Vista previa de la app" width="100%">
 
 </div>
 
