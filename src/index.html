@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Porra Mundial 2026 - Visual vacio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="poster-shell">
+    <nav class="app-tabs" aria-label="Secciones">
+      <button class="app-tab active" type="button" data-tab="bracket">Generar por cuadro</button>
+      <button class="app-tab" type="button" data-tab="pots">Generar por bombo</button>
+    </nav>
+    <header class="topbar">
+      <div class="tab-toolbar active" data-toolbar="bracket">
+        <div class="topbar-copy">
+          <h2>Fase de grupos</h2>
+          <p class="topbar-lead">Grupos y eliminatorias vacias para completar con drag and drop.</p>
+          <div class="fill-options" aria-label="Formas de rellenar el cuadro">
+            <div class="fill-option">
+              <span class="option-number">1</span>
+              <span>
+                <strong>Ordena los grupos</strong>
+                <small>Coloca cada grupo como crees que quedara y pulsa Simular primera ronda. Despues termina el resto de cruces a mano.</small>
+              </span>
+            </div>
+            <div class="fill-option">
+              <span class="option-number">2</span>
+              <span>
+                <strong>Rellena a mano</strong>
+                <small>Arrastra cada equipo directamente al cruce que quieras completar, incluida la segunda ronda en adelante.</small>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="top-actions">
+          <button id="simulateFullBracket" class="simulate-full-btn" type="button">Simular primera ronda</button>
+          <button id="resetBoard" class="reset-btn" type="button">Reset</button>
+        </div>
+      </div>
+      <div class="tab-toolbar" data-toolbar="pots">
+        <div class="topbar-copy">
+          <h2>Generar por bombo</h2>
+          <p class="topbar-lead">Selecciona el mejor equipo de cada bombo y genera debajo una vista del cuadrante con tus elegidos destacados.</p>
+          <div id="potControls" class="pot-controls" aria-label="Seleccion por bombo"></div>
+        </div>
+        <div class="top-actions">
+          <button id="generatePotBracket" class="simulate-full-btn" type="button">Generar cuadrante</button>
+          <button id="resetPotMode" class="reset-btn" type="button">Reset</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="worldcup-board" aria-label="Cuadrante Mundial 2026">
+      <svg id="flowLines" class="flow-lines" aria-hidden="true"></svg>
+      <div class="board-title">
+        <h1>FIFA WORLD CUP 2026</h1>
+        <p>★ ★ ★ CUADRANTE DE COMPETICION ★ ★ ★</p>
+      </div>
+
+      <div class="bracket-grid">
+        <div id="groupsLeft" class="groups-side groups-left"></div>
+        <div class="round-column round-of-16 left-r32">
+          <h3>Ronda de 32</h3>
+          <div id="r32Left" class="matches stack-8"></div>
+        </div>
+        <div class="round-column quarter left-qf">
+          <h3>Octavos de final</h3>
+          <div id="qfLeft" class="matches stack-4"></div>
+        </div>
+        <div class="round-column semi left-sf">
+          <h3>Cuartos de final</h3>
+          <div id="sfLeft" class="matches stack-2"></div>
+        </div>
+
+        <div class="final-zone">
+          <h3>Semifinales</h3>
+          <div id="semiFinalsCenter" class="matches semis-center"></div>
+          <h3 class="final-heading">Final</h3>
+          <div id="finalMatch" class="matches"></div>
+          <div id="championSlot" class="champion-slot drop-zone" data-slot-id="champion" data-source-label="G104">
+            <span>Campeon</span>
+            <strong>Suelta equipo</strong>
+          </div>
+        </div>
+
+        <div class="round-column semi right-sf">
+          <h3>Cuartos de final</h3>
+          <div id="sfRight" class="matches stack-2"></div>
+        </div>
+        <div class="round-column quarter right-qf">
+          <h3>Octavos de final</h3>
+          <div id="qfRight" class="matches stack-4"></div>
+        </div>
+        <div class="round-column round-of-16 right-r32">
+          <h3>Ronda de 32</h3>
+          <div id="r32Right" class="matches stack-8"></div>
+        </div>
+        <div id="groupsRight" class="groups-side groups-right"></div>
+      </div>
+    </section>
+
+    <section id="simulationResults" class="simulation-results" hidden></section>
+  </main>
+
+  <script type="module" src="renderer.mjs?v=hide-selection-in-pot-mode-20260608"></script>
+</body>
+</html>

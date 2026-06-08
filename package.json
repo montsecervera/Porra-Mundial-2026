@@ -1,0 +1,34 @@
+{
+  "name": "mundial2026-app-visual-vacio",
+  "version": "0.1.0",
+  "description": "Mini aplicacion compartible con grupos y eliminatorias vacias para la porra del Mundial 2026.",
+  "type": "module",
+  "main": "src/main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "build:portable": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.quinielas.mundial2026.visualvacio",
+    "productName": "Mundial 2026 App Visual Vacio",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ]
+    },
+    "portable": {
+      "artifactName": "Mundial2026-App-Visual-Vacio-Portable.exe"
+    }
+  },
+  "devDependencies": {
+    "electron": "^30.5.1",
+    "electron-builder": "^26.15.2"
+  }
+}
