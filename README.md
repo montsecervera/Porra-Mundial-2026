@@ -24,7 +24,7 @@ Para usar la app no hace falta tocar codigo: descarga uno de los `.exe` y abre l
 | Opcion | Archivo | Cuando usarla |
 | --- | --- | --- |
 | Portable | [`Mundial2026-App-Visual-Vacio-Portable.exe`](./Mundial2026-App-Visual-Vacio-Portable.exe) | Abrir y usar directamente, sin instalar nada. |
-| Instalador | [`Mundial 2026 App Visual Vacio Setup 0.1.0.exe`](./Mundial%202026%20App%20Visual%20Vacio%20Setup%200.1.0.exe) | Instalar la app en Windows como una aplicacion normal. Despues podras buscarla y abrirla desde el menu/directorio de aplicaciones de tu PC. |
+| Instalador | [`Mundial 2026 App Visual Vacio Setup 0.1.0.exe`](./Mundial%202026%20App%20Visual%20Vacio%20Setup%200.1.0.exe) | Instalar la app en Windows como una aplicación normal. Después podrás buscarla y abrirla desde el menú/directorio de aplicaciones de tu PC. |
 
 > Windows puede mostrar un aviso de editor desconocido porque la app no esta firmada con certificado comercial.
 
