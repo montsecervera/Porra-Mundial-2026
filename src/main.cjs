@@ -1,5 +1,6 @@
 const { app, BrowserWindow, shell } = require('electron');
 const path = require('node:path');
+const { safeExternalUrl } = require('./safe-external-url.cjs');
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -11,15 +12,18 @@ function createWindow() {
     backgroundColor: '#07111f',
     webPreferences: {
       contextIsolation: true,
-      nodeIntegration: false
+      nodeIntegration: false,
+      sandbox: true
     }
   });
 
   win.loadFile(path.join(__dirname, 'index.html'));
   win.webContents.setWindowOpenHandler(({ url }) => {
-    shell.openExternal(url);
+    const destination = safeExternalUrl(url);
+    if (destination) shell.openExternal(destination);
     return { action: 'deny' };
   });
+  win.webContents.on('will-navigate', (event) => event.preventDefault());
 }
 
 app.whenReady().then(() => {
